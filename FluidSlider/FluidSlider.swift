@@ -21,7 +21,7 @@ public class FluidSlider: UIControl {
 	
 	/// The maximum value of the slider.
 	@IBInspectable
-	public var maximumValue: Double = 1
+	public var maximumValue: Double = 1000
 	
 	/// The current value of the slider.
 	@IBInspectable
@@ -31,7 +31,7 @@ public class FluidSlider: UIControl {
 	/// automatically get set to `nil`, as those are illegal values. If set to greater than `maximumValue - minimumValue`,
 	/// `step` will automatically get set to `maximumValue - minimumValue`. If the
 	@IBInspectable
-	public var step: Double = 0.1 {
+	public var step: Double = 1 {
 		didSet {
 			guard step != 0 else { return }
 			guard step > 0 else { step = 0; return }
@@ -79,6 +79,7 @@ public class FluidSlider: UIControl {
 		
 		thumbLayer.backgroundColor = UIColor.green.cgColor
 		layer.addSublayer(thumbLayer)
+		thumbLayer.anchorPoint = .zero
 		
 		updateTrackLayer()
 		updateThumbLayer()
@@ -100,11 +101,14 @@ public class FluidSlider: UIControl {
 		thumbLayer.text = "\(currentValue)"
 		
 		let thumbCenterX = positionForValue(value: currentValue)
+		let width = max(thumbHeight, thumbLayer.textWidth() + 16)
+		let y = isTracking ? -(thumbHeight + thumbInset) : thumbInset
 		thumbLayer.frame = CGRect(
-			x: thumbCenterX - (thumbHeight / 2),
-			y: thumbInset,
-			width: thumbHeight,
+			x: thumbCenterX - (width / 2),
+			y: y,
+			width: width,
 			height: thumbHeight)
+		thumbLayer.cornerRadius = thumbHeight / 2
 	}
 	
 	private func positionForValue(value: Double) -> CGFloat {
@@ -123,7 +127,6 @@ public class FluidSlider: UIControl {
 	
 	private func value(for position: CGPoint) -> Double {
 		let value = (maximumValue - minimumValue) * Double(position.x - (thumbHeight / 2)) / Double(trackLayer.bounds.width - thumbHeight)
-		print(value)
 		return value
 	}
 	
@@ -160,6 +163,7 @@ public class FluidSlider: UIControl {
 		if beginTracking {
 			sendActions(for: .editingDidBegin)
 		}
+		animateThumbLayerUp()
 		return beginTracking
 	}
 	
@@ -187,5 +191,33 @@ public class FluidSlider: UIControl {
 	public override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
 		super.endTracking(touch, with: event)
 		sendActions(for: .editingDidEnd)
+		animateThumbLayerDown()
+	}
+	
+	// MARK: - Animations
+	
+	private func animateThumbLayerUp() {
+		let animation = CASpringAnimation(keyPath: "position")
+//		animation.damping = 5
+		animation.duration = 0.5
+//		animation.stiffness = 50
+		animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+		animation.fromValue = thumbLayer.position
+		let endPosition = CGPoint(x: thumbLayer.position.x, y: -(thumbHeight + thumbInset))
+		animation.toValue = endPosition
+		thumbLayer.position = endPosition
+		thumbLayer.add(animation, forKey: "position")
+	}
+	
+	private func animateThumbLayerDown() {
+		let animation = CASpringAnimation(keyPath: "position")
+		animation.damping = 8
+		animation.duration = 0.5
+		animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+		animation.fromValue = thumbLayer.position
+		let endPosition = CGPoint(x: thumbLayer.position.x, y: thumbInset)
+		animation.toValue = endPosition
+		thumbLayer.add(animation, forKey: "position")
+		thumbLayer.position = endPosition
 	}
 }

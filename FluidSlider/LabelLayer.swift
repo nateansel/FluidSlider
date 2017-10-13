@@ -67,4 +67,8 @@ class LabelLayer: CALayer {
 			UIGraphicsPopContext()
 		}
 	}
+	
+	func textWidth() -> CGFloat {
+		return attrString.size().width
+	}
 }
