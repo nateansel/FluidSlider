@@ -8,12 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		0EC58EAE1F90062C003CC5C9 /* FluidSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EC58EAC1F90062C003CC5C9 /* FluidSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EC58EBB1F900647003CC5C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC58EBA1F900647003CC5C9 /* AppDelegate.swift */; };
+		0EC58EBD1F900647003CC5C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC58EBC1F900647003CC5C9 /* ViewController.swift */; };
+		0EC58EC01F900647003CC5C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC58EBE1F900647003CC5C9 /* Main.storyboard */; };
+		0EC58EC21F900647003CC5C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC58EC11F900647003CC5C9 /* Assets.xcassets */; };
+		0EC58EC51F900647003CC5C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC58EC31F900647003CC5C9 /* LaunchScreen.storyboard */; };
+		0EC58ECB1F900731003CC5C9 /* FluidSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC58ECA1F900731003CC5C9 /* FluidSlider.swift */; };
+		0EC58ECF1F900DC8003CC5C9 /* FluidSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC58EA91F90062C003CC5C9 /* FluidSlider.framework */; };
+		0EC58ED31F9014D6003CC5C9 /* LabelLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC58ED21F9014D6003CC5C9 /* LabelLayer.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EC58ED01F900E9D003CC5C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EC58EA01F90062C003CC5C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EC58EA81F90062C003CC5C9;
+			remoteInfo = FluidSlider;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0EC58EA91F90062C003CC5C9 /* FluidSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FluidSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC58EAC1F90062C003CC5C9 /* FluidSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FluidSlider.h; sourceTree = "<group>"; };
 		0EC58EAD1F90062C003CC5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EC58EB81F900647003CC5C9 /* FluidSlider Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FluidSlider Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EC58EBA1F900647003CC5C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0EC58EBC1F900647003CC5C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0EC58EBF1F900647003CC5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0EC58EC11F900647003CC5C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0EC58EC41F900647003CC5C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0EC58EC61F900647003CC5C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EC58ECA1F900731003CC5C9 /* FluidSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidSlider.swift; sourceTree = "<group>"; };
+		0EC58ED21F9014D6003CC5C9 /* LabelLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +51,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0EC58EB51F900647003CC5C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC58ECF1F900DC8003CC5C9 /* FluidSlider.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -31,7 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				0EC58EAB1F90062C003CC5C9 /* FluidSlider */,
+				0EC58EB91F900647003CC5C9 /* Example */,
 				0EC58EAA1F90062C003CC5C9 /* Products */,
+				0EC58ECE1F900DC8003CC5C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -39,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC58EA91F90062C003CC5C9 /* FluidSlider.framework */,
+				0EC58EB81F900647003CC5C9 /* FluidSlider Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +84,32 @@
 		0EC58EAB1F90062C003CC5C9 /* FluidSlider */ = {
 			isa = PBXGroup;
 			children = (
+				0EC58ECA1F900731003CC5C9 /* FluidSlider.swift */,
+				0EC58ED21F9014D6003CC5C9 /* LabelLayer.swift */,
 				0EC58EAC1F90062C003CC5C9 /* FluidSlider.h */,
 				0EC58EAD1F90062C003CC5C9 /* Info.plist */,
 			);
 			path = FluidSlider;
+			sourceTree = "<group>";
+		};
+		0EC58EB91F900647003CC5C9 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				0EC58EBA1F900647003CC5C9 /* AppDelegate.swift */,
+				0EC58EBC1F900647003CC5C9 /* ViewController.swift */,
+				0EC58EBE1F900647003CC5C9 /* Main.storyboard */,
+				0EC58EC11F900647003CC5C9 /* Assets.xcassets */,
+				0EC58EC31F900647003CC5C9 /* LaunchScreen.storyboard */,
+				0EC58EC61F900647003CC5C9 /* Info.plist */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		0EC58ECE1F900DC8003CC5C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +144,40 @@
 			productReference = 0EC58EA91F90062C003CC5C9 /* FluidSlider.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		0EC58EB71F900647003CC5C9 /* FluidSlider Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EC58EC71F900647003CC5C9 /* Build configuration list for PBXNativeTarget "FluidSlider Example" */;
+			buildPhases = (
+				0EC58EB41F900647003CC5C9 /* Sources */,
+				0EC58EB51F900647003CC5C9 /* Frameworks */,
+				0EC58EB61F900647003CC5C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0EC58ED11F900E9D003CC5C9 /* PBXTargetDependency */,
+			);
+			name = "FluidSlider Example";
+			productName = Example;
+			productReference = 0EC58EB81F900647003CC5C9 /* FluidSlider Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		0EC58EA01F90062C003CC5C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Nathan Ansel";
 				TargetAttributes = {
 					0EC58EA81F90062C003CC5C9 = {
+						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					0EC58EB71F900647003CC5C9 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -105,6 +189,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 0EC58E9F1F90062C003CC5C9;
 			productRefGroup = 0EC58EAA1F90062C003CC5C9 /* Products */;
@@ -112,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				0EC58EA81F90062C003CC5C9 /* FluidSlider */,
+				0EC58EB71F900647003CC5C9 /* FluidSlider Example */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +210,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0EC58EB61F900647003CC5C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC58EC51F900647003CC5C9 /* LaunchScreen.storyboard in Resources */,
+				0EC58EC21F900647003CC5C9 /* Assets.xcassets in Resources */,
+				0EC58EC01F900647003CC5C9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -131,10 +227,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC58ED31F9014D6003CC5C9 /* LabelLayer.swift in Sources */,
+				0EC58ECB1F900731003CC5C9 /* FluidSlider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EC58EB41F900647003CC5C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC58EBD1F900647003CC5C9 /* ViewController.swift in Sources */,
+				0EC58EBB1F900647003CC5C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EC58ED11F900E9D003CC5C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EC58EA81F90062C003CC5C9 /* FluidSlider */;
+			targetProxy = 0EC58ED01F900E9D003CC5C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0EC58EBE1F900647003CC5C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EC58EBF1F900647003CC5C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0EC58EC31F900647003CC5C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EC58EC41F900647003CC5C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0EC58EAF1F90062C003CC5C9 /* Debug */ = {
@@ -253,6 +387,7 @@
 		0EC58EB21F90062C003CC5C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -261,10 +396,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FluidSlider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.FluidSlider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -273,6 +410,7 @@
 		0EC58EB31F90062C003CC5C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -281,10 +419,41 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FluidSlider/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.FluidSlider;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0EC58EC81F900647003CC5C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37E2RLU4H9;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.FluidSliderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0EC58EC91F900647003CC5C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 37E2RLU4H9;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.FluidSliderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,6 +476,15 @@
 			buildConfigurations = (
 				0EC58EB21F90062C003CC5C9 /* Debug */,
 				0EC58EB31F90062C003CC5C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EC58EC71F900647003CC5C9 /* Build configuration list for PBXNativeTarget "FluidSlider Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EC58EC81F900647003CC5C9 /* Debug */,
+				0EC58EC91F900647003CC5C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
