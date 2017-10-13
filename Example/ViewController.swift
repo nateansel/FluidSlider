@@ -21,5 +21,20 @@ class ViewController: UIViewController {
 		super.viewDidAppear(animated)
 		view.setNeedsDisplay()
 	}
+	
+	@objc
+	private func sliderDidStartMoving(_ sender: FluidSlider) {
+		print("Slider: \(sender) started moving.")
+	}
+	
+	@objc
+	private func sliderDidStopMoving(_ sender: FluidSlider) {
+		print("Slider: \(sender) stopped moving.")
+	}
+	
+	@objc
+	private func sliderChangedValued(_ sender: FluidSlider) {
+		print("Slider: \(sender) changed value: \(sender.currentValue).")
+	}
 }
 

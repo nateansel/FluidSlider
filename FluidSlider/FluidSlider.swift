@@ -30,21 +30,15 @@ public class FluidSlider: UIControl {
 	/// The step that the slider will snap to while dragging. If set to less than or equal to `0`, `step` will
 	/// automatically get set to `nil`, as those are illegal values. If set to greater than `maximumValue - minimumValue`,
 	/// `step` will automatically get set to `maximumValue - minimumValue`. If the
-	public var step: Double? = 0.1 {
+	@IBInspectable
+	public var step: Double = 0.1 {
 		didSet {
-			guard let step = step else { return }
-			guard step > 0 else { self.step = nil; return }
+			guard step != 0 else { return }
+			guard step > 0 else { step = 0; return }
 			let maxStep = maximumValue - minimumValue
 			if step > maxStep {
-				self.step = maxStep
+				step = maxStep
 			}
-		}
-	}
-	
-	public override var frame: CGRect {
-		didSet {
-			updateTrackLayer()
-			updateThumbLayer()
 		}
 	}
 	
@@ -137,7 +131,7 @@ public class FluidSlider: UIControl {
 	///
 	/// - parameter value: The value to calulate with.
 	private func nearestStep(to value: Double) -> Double {
-		guard let step = step else { return value }
+		guard step > 0 else { return value }
 		
 		let numberOfCurrentSteps = Int((value - minimumValue) / step)
 		
